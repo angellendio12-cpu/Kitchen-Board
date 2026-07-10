@@ -1,0 +1,409 @@
+/* ==========================
+   THE KITCHEN BOARD
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Baloo 2',sans-serif;
+
+    background:#FAF6E9;
+
+    color:#333;
+
+    padding:20px;
+
+}
+
+.container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+h1{
+
+    text-align:center;
+
+    color:#5B6B3A;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================
+   TEAM SETUP
+========================== */
+
+.setup{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:20px;
+
+}
+
+.setup input{
+
+    flex:1;
+
+    padding:15px;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+
+}
+
+.vs{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+   GAME SETTINGS
+========================== */
+
+.gameSettings{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.gameSettings label{
+
+    display:grid;
+    
+    margin-top:25px;
+    
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#DDEB9D;
+
+    font-size:18px;
+
+}
+
+.gameSettings select{
+    
+    margin-top:25px;
+    
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#DDEB9D;
+
+    font-size:18px;
+
+}
+
+/* ==========================
+   START BUTTON
+========================== */
+
+.startBtn{
+
+    display:block;
+
+    margin:0 auto 35px;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#A0C878;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.startBtn:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================
+   SCOREBOARD
+========================== */
+
+.scoreboard{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.card{
+
+    background:#DDEB9D;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 8px 15px rgba(0,0,0,.1);
+
+}
+
+.card h2{
+
+    color:#4E5B31;
+
+    margin-bottom:20px;
+
+}
+
+.score{
+
+    font-size:90px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+button{
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.card button{
+
+    width:100%;
+
+    padding:14px;
+
+    background:#A0C878;
+
+    color:white;
+
+    font-size:16px;
+
+    margin-top:12px;
+
+}
+
+button:hover{
+
+    opacity:.9;
+
+}
+
+/* ==========================
+   SERVER
+========================== */
+
+.serverCard h3{
+
+    margin:15px 0;
+
+    font-size:28px;
+
+}
+
+/* Portrait */
+
+.serverButton{
+
+    width:100%;
+
+}
+
+.switchButton{
+
+    width:100%;
+
+}
+
+/* ==========================
+   SERVING TEAM
+========================== */
+
+.serving{
+
+    margin-top:25px;
+
+    background:#FFF7D6;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    font-size:22px;
+
+}
+
+/* ==========================
+   WINNER
+========================== */
+
+.winner{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    font-size:28px;
+
+    color:#2F6F2F;
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+   CONTROLS
+========================== */
+
+.controls{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.controls button{
+
+    padding:15px;
+
+    background:#A0C878;
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+/* ==========================
+   DISABLED BUTTON
+========================== */
+
+button:disabled{
+
+    background:#D1D1D1;
+
+    cursor:not-allowed;
+
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media(max-width:900px){
+
+    .scoreboard{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:700px){
+
+    .setup{
+
+        flex-direction:column;
+
+    }
+
+}
+
+/* ==========================
+   LANDSCAPE
+========================== */
+
+@media (orientation:landscape){
+
+    .serverCard{
+
+        display:flex;
+
+        flex-direction:column;
+
+    }
+
+    .serverButton,
+
+    .switchButton{
+
+        width:48%;
+
+    }
+
+    .serverCard button{
+
+        display:inline-block;
+
+    }
+
+}

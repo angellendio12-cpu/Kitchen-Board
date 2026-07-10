@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Kitchen Board</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>The Kitchen Board</h1>
+
+    <!-- TEAM SETUP -->
+    <div class="setup">
+
+        <input
+            id="teamAInput"
+            type="text"
+            placeholder="Enter Team A Name">
+
+        <div class="vs">VS</div>
+
+        <input
+            id="teamBInput"
+            type="text"
+            placeholder="Enter Team B Name">
+
+    </div>
+
+    
+
+    <!-- START BUTTON -->
+
+    <button class="startBtn" onclick="startGame()">
+
+        START GAME
+
+    </button>
+
+    <!-- SCOREBOARD -->
+
+    <div class="scoreboard">
+
+        <!-- TEAM A -->
+
+        <div class="card">
+
+            <h2 id="teamAName">Team A</h2>
+
+            <div class="score" id="scoreA">0</div>
+
+            <button
+                id="btnA"
+                onclick="addPoint('A')">
+
+                + POINT
+
+            </button>
+
+        </div>
+
+        <!-- TEAM B -->
+
+        <div class="card">
+
+            <h2 id="teamBName">Team B</h2>
+
+            <div class="score" id="scoreB">0</div>
+
+            <button
+                id="btnB"
+                onclick="addPoint('B')">
+
+                + POINT
+
+            </button>
+
+        </div>
+
+        <!-- SERVER -->
+
+        <div class="card serverCard">
+
+            <h2>Server</h2>
+
+            <h3 id="serverTeam">
+
+                Team A
+
+            </h3>
+
+            <button
+                id="serverNumber"
+                class="serverButton"
+                onclick="toggleServerNumber()">
+
+                Server #1
+
+            </button>
+
+            <button
+                class="switchButton"
+                onclick="switchServer()">
+
+                Switch Server
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- SERVING TEAM -->
+
+    <div class="serving">
+
+        Serving Team:
+
+        <span id="servingText">
+
+            Team A
+
+        </span>
+
+    </div>
+
+    <!-- GAME STATUS -->
+
+    <div
+        id="winnerBanner"
+        class="winner">
+
+    </div>
+
+    <!-- CONTROLS -->
+
+    <div class="controls">
+
+        <button onclick="undoPoint()">
+
+            Undo
+
+        </button>
+
+        <button onclick="resetGame()">
+
+            Reset
+
+        </button>
+
+    </div>
+
+    <!-- WINNING SCORE -->
+    <div class="gameSettings">
+
+        <label>Play To</label>
+
+        <select id="winningScore">
+
+            <option value="8">8</option>
+            <option value="11" selected>11</option>
+            <option value="15">15</option>
+            <option value="25">25</option>
+
+        </select>
+
+    </div>
+    
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
