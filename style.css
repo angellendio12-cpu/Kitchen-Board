@@ -1,0 +1,430 @@
+/* ==========================================
+   THE KITCHEN BOARD
+   STYLE.CSS
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:#FAF6E9;
+
+    color:#333;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.container{
+
+    width:100%;
+
+    max-width:1000px;
+
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+header h1{
+
+    color:#4E5B31;
+
+    font-size:40px;
+
+    margin-bottom:8px;
+
+}
+
+header p{
+
+    color:#6D7657;
+
+}
+
+/* ===============================
+   SETUP CARD
+================================ */
+
+.setup-card{
+
+    background:#FFF7D6;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    margin-bottom:25px;
+
+}
+
+.team-input{
+
+    flex:1;
+
+}
+
+.team-input input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    font-size:18px;
+
+    outline:none;
+
+    border:2px solid transparent;
+
+    transition:.3s;
+
+}
+
+.team-input input:focus{
+
+    border-color:#A0C878;
+
+}
+
+.vs{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#5F6F52;
+
+}
+
+/* ===============================
+   START BUTTON
+================================ */
+
+.start-container{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+#startMatchBtn{
+
+    background:#A0C878;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 40px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+#startMatchBtn:hover{
+
+    background:#7AA65C;
+
+    transform:scale(1.05);
+
+}
+
+/* ===============================
+   SCOREBOARD
+================================ */
+
+.scoreboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.card{
+
+    background:#DDEB9D;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+    color:#4E5B31;
+
+    margin-bottom:20px;
+
+}
+
+.score{
+
+    font-size:90px;
+
+    font-weight:bold;
+
+    color:#2F3E1F;
+
+    margin-bottom:20px;
+
+}
+
+.server-display{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+
+.card button,
+
+.controls button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#A0C878;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.card button:hover,
+
+.controls button:hover{
+
+    background:#7AA65C;
+
+}
+
+.card button:disabled{
+
+    background:#cfcfcf;
+
+    cursor:not-allowed;
+
+}
+
+/* ===============================
+   SERVING TEAM
+================================ */
+
+.serving-card{
+
+    margin-top:25px;
+
+    background:#FFF7D6;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+/* ===============================
+   WINNER
+================================ */
+
+.winner-banner{
+
+    margin-top:25px;
+
+    background:#A0C878;
+
+    color:white;
+
+    text-align:center;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    animation:pop .4s ease;
+
+}
+
+@keyframes pop{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ===============================
+   CONTROLS
+================================ */
+
+.controls{
+
+    margin-top:25px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+}
+
+/* ===============================
+   HIDDEN
+================================ */
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media(max-width:768px){
+
+    .setup-card{
+
+        flex-direction:column;
+
+    }
+
+    .scoreboard-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .controls{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .score{
+
+        font-size:70px;
+
+    }
+
+    header h1{
+
+        font-size:32px;
+
+    }
+    
+    .switch-btn{
+
+    margin-top:15px;
+
+    background:#FFF7D6 !important;
+
+    color:#4E5B31 !important;
+
+}
+
+.switch-btn:hover{
+
+    background:#DDEB9D !important;
+
+}
+
+}
+
