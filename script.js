@@ -20,7 +20,7 @@ let history = [];
 // START GAME
 // ---------------------------
 
-function startGame(){
+function startMatch(){
 
     const teamA =
         document.getElementById("teamAInput").value.trim();
@@ -34,15 +34,11 @@ function startGame(){
     document.getElementById("teamBName").textContent =
         teamB || "Team B";
 
-    document.getElementById("serverTeam").textContent =
+    document.getElementById("servingTeam").textContent =
         teamA || "Team A";
 
-    document.getElementById("servingText").textContent =
+    document.getElementById("statusServing").textContent =
         teamA || "Team A";
-
-    winningScore = parseInt(
-        document.getElementById("winningScore").value
-    );
 
     scoreA = 0;
     scoreB = 0;
@@ -52,7 +48,17 @@ function startGame(){
 
     history = [];
 
-    updateDisplay();
+    gameLimit = parseInt(
+        document.getElementById("gameLimit").value
+    );
+
+    document.getElementById("homeScreen").style.display =
+        "none";
+
+    document.getElementById("scoreboard").style.display =
+        "block";
+
+    updateBoard();
 
 }
 
